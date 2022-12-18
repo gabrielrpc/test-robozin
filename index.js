@@ -2,7 +2,7 @@ const pup = require("puppeteer");
 const shell = require("shelljs");
 const { PDFDocument } = require("pdf-lib");
 const fs = require("fs");
-// const merge = require('./index2')
+
 
 const url = "http://omnissolucoes.com/teste3/";
 

@@ -6,6 +6,8 @@ const fs = require("fs");
 
 const url = "http://omnissolucoes.com/teste3/";
 
+
+
 (async () => {
   const browser = await pup.launch({ headless: false });
   const page = await browser.newPage();
@@ -57,6 +59,9 @@ const url = "http://omnissolucoes.com/teste3/";
   await page.waitForTimeout(2000);
   await fs.writeFileSync("./unificado.pdf", await doc.save());
 
-  await page.waitForTimeout(3000);
+  await page.goto("http://127.0.0.1:5500/unificado.pdf");
+
+
+  await page.waitForTimeout(5000);
   await browser.close();
 })();
